@@ -9,10 +9,13 @@ phases:
   build:
     commands:
       - "echo 'Build started on' $(date)"
-  post_build:
-    commands:
-      - "echo 'Build completed on' $(date)"
 
 artifacts:
   files:
-    - "**/*"
+    - "index.js"
+    - "package.json"
+    - "package-lock.json"
+    - "node_modules/**/*"
+    - ".gitignore"
+    - "buildspec.yml"
+  discard-paths: no
